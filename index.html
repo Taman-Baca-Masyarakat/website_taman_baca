@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="id" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taman Baca Masyarakat</title>
+    <link rel="stylesheet" href="./src/output.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Source+Sans+3:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body
+    class="h-full font-body overflow-auto"
+    style="background-color: #faf6f0"
+  >
+    <div class="w-full min-h-full">
+      <!-- Navbar -->
+      <nav
+        class="w-full px-6 py-4 flex items-center justify-between sticky top-0 z-50"
+        style="
+          background-color: #faf6f0;
+          border-bottom: 1px solid rgba(76, 115, 84, 0.1);
+        "
+      >
+        <div class="flex items-center gap-2">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center"
+            style="background-color: #4c7354"
+          >
+            <i
+              data-lucide="book-open"
+              style="width: 20px; height: 20px; color: #faf6f0"
+            ></i>
+          </div>
+          <span
+            id="nav-title"
+            class="font-heading font-bold text-xl"
+            style="color: #2c2c2c"
+            >Taman Baca Ceria</span
+          >
+        </div>
+        <div
+          class="hidden md:flex gap-8 text-sm font-medium"
+          style="color: #5a5a5a"
+        >
+          <a href="#beranda" class="hover:opacity-70 transition">Beranda</a>
+          <a href="#tentang" class="hover:opacity-70 transition">Tentang</a>
+          <a href="#koleksi" class="hover:opacity-70 transition">Koleksi</a>
+          <a href="#kegiatan" class="hover:opacity-70 transition">Kegiatan</a>
+          <a href="#kontak" class="hover:opacity-70 transition">Kontak</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden" style="color: #2c2c2c">
+          <i data-lucide="menu" style="width: 24px; height: 24px"></i>
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 text-lg font-medium"
+        style="background-color: #faf6f0; color: #2c2c2c"
+      >
+        <button id="close-menu" class="absolute top-5 right-6">
+          <i data-lucide="x" style="width: 28px; height: 28px"></i>
+        </button>
+        <a href="#beranda" class="mobile-link">Beranda</a>
+        <a href="#tentang" class="mobile-link">Tentang</a>
+        <a href="#koleksi" class="mobile-link">Koleksi</a>
+        <a href="#kegiatan" class="mobile-link">Kegiatan</a>
+        <a href="#kontak" class="mobile-link">Kontak</a>
+      </div>
+      <!-- Hero -->
+      <section
+        id="beranda"
+        class="hero-pattern w-full px-6 py-20 md:py-32 flex flex-col items-center text-center"
+      >
+        <div class="book-float mb-8">
+          <svg width="80" height="80" viewbox="0 0 80 80" fill="none">
+            <rect
+              x="10"
+              y="15"
+              width="60"
+              height="50"
+              rx="4"
+              fill="#4c7354"
+              opacity="0.9"
+            />
+            <rect x="14" y="19" width="24" height="42" rx="2" fill="#faf6f0" />
+            <rect x="42" y="19" width="24" height="42" rx="2" fill="#faf6f0" />
+            <line
+              x1="40"
+              y1="19"
+              x2="40"
+              y2="61"
+              stroke="#4c7354"
+              stroke-width="2"
+            />
+            <rect
+              x="18"
+              y="26"
+              width="16"
+              height="2"
+              rx="1"
+              fill="#eab364"
+              opacity="0.7"
+            />
+            <rect
+              x="18"
+              y="32"
+              width="12"
+              height="2"
+              rx="1"
+              fill="#4c7354"
+              opacity="0.3"
+            />
+            <rect
+              x="18"
+              y="38"
+              width="14"
+              height="2"
+              rx="1"
+              fill="#4c7354"
+              opacity="0.3"
+            />
+            <rect
+              x="46"
+              y="26"
+              width="16"
+              height="2"
+              rx="1"
+              fill="#eab364"
+              opacity="0.7"
+            />
+            <rect
+              x="46"
+              y="32"
+              width="12"
+              height="2"
+              rx="1"
+              fill="#4c7354"
+              opacity="0.3"
+            />
+            <rect
+              x="46"
+              y="38"
+              width="14"
+              height="2"
+              rx="1"
+              fill="#4c7354"
+              opacity="0.3"
+            />
+          </svg>
+        </div>
+        <h1
+          id="hero-title"
+          class="font-heading font-bold text-4xl md:text-6xl fade-in"
+          style="color: #2c2c2c"
+        >
+          Taman Baca Ceria
+        </h1>
+        <p
+          id="hero-tagline"
+          class="mt-4 text-xl md:text-2xl font-light fade-in fade-in-delay-1"
+          style="color: #5a5a5a"
+        >
+          Membuka Jendela Dunia untuk Semua
+        </p>
+        <a
+          href="#tentang"
+          class="mt-8 px-8 py-3 rounded-full font-medium text-base transition hover:scale-105 fade-in fade-in-delay-2"
+          style="background-color: #4c7354; color: #faf6f0"
+          >Jelajahi →</a
+        >
+      </section>
+      <!-- Tentang -->
+      <section id="tentang" class="w-full px-6 py-20 md:py-28">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            class="font-heading font-semibold text-3xl md:text-4xl text-center fade-in"
+            style="color: #2c2c2c"
+          >
+            Tentang Kami
+          </h2>
+          <p
+            id="about-desc"
+            class="mt-6 text-center text-lg leading-relaxed max-w-2xl mx-auto fade-in fade-in-delay-1"
+            style="color: #5a5a5a"
+          >
+            Taman Baca Ceria hadir sebagai ruang literasi untuk masyarakat. Kami
+            percaya bahwa setiap orang berhak mendapatkan akses terhadap buku
+            dan pengetahuan, tanpa memandang latar belakang.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+            <div
+              class="rounded-2xl p-6 text-center fade-in fade-in-delay-1"
+              style="
+                background-color: #ffffff;
+                border: 1px solid rgba(76, 115, 84, 0.12);
+              "
+            >
+              <div
+                class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4"
+                style="background-color: rgba(76, 115, 84, 0.1)"
+              >
+                <i
+                  data-lucide="book-open"
+                  style="color: #4c7354; width: 28px; height: 28px"
+                ></i>
+              </div>
+              <h3
+                class="font-heading font-semibold text-lg"
+                style="color: #2c2c2c"
+              >
+                2.500+ Buku
+              </h3>
+              <p class="mt-2 text-sm" style="color: #5a5a5a">
+                Koleksi beragam untuk semua usia
+              </p>
+            </div>
+            <div
+              class="rounded-2xl p-6 text-center fade-in fade-in-delay-2"
+              style="
+                background-color: #ffffff;
+                border: 1px solid rgba(76, 115, 84, 0.12);
+              "
+            >
+              <div
+                class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4"
+                style="background-color: rgba(234, 179, 100, 0.15)"
+              >
+                <i
+                  data-lucide="users"
+                  style="color: #eab364; width: 28px; height: 28px"
+                ></i>
+              </div>
+              <h3
+                class="font-heading font-semibold text-lg"
+                style="color: #2c2c2c"
+              >
+                500+ Anggota
+              </h3>
+              <p class="mt-2 text-sm" style="color: #5a5a5a">
+                Komunitas pembaca aktif
+              </p>
+            </div>
+            <div
+              class="rounded-2xl p-6 text-center fade-in fade-in-delay-3"
+              style="
+                background-color: #ffffff;
+                border: 1px solid rgba(76, 115, 84, 0.12);
+              "
+            >
+              <div
+                class="w-14 h-14 mx-auto rounded-xl flex items-center justify-center mb-4"
+                style="background-color: rgba(76, 115, 84, 0.1)"
+              >
+                <i
+                  data-lucide="calendar"
+                  style="color: #4c7354; width: 28px; height: 28px"
+                ></i>
+              </div>
+              <h3
+                class="font-heading font-semibold text-lg"
+                style="color: #2c2c2c"
+              >
+                50+ Kegiatan/Tahun
+              </h3>
+              <p class="mt-2 text-sm" style="color: #5a5a5a">
+                Program literasi rutin
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Koleksi -->
+      <section
+        id="koleksi"
+        class="w-full px-6 py-20"
+        style="background-color: #ffffff"
+      >
+        <div class="max-w-5xl mx-auto">
+          <h2
+            class="font-heading font-semibold text-3xl md:text-4xl text-center"
+            style="color: #2c2c2c"
+          >
+            Koleksi Buku
+          </h2>
+          <p class="mt-3 text-center" style="color: #5a5a5a">
+            Berbagai genre untuk semua kalangan
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">📚</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Fiksi
+              </p>
+            </div>
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">🔬</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Sains
+              </p>
+            </div>
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">🌍</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Sejarah
+              </p>
+            </div>
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">🎨</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Seni
+              </p>
+            </div>
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">👶</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Anak-anak
+              </p>
+            </div>
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">💼</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Bisnis
+              </p>
+            </div>
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">🧘</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Self-Help
+              </p>
+            </div>
+            <div
+              class="rounded-xl p-5 text-center transition hover:scale-105 cursor-default"
+              style="background-color: #faf6f0"
+            >
+              <span class="text-3xl">📖</span>
+              <p class="mt-3 font-medium text-sm" style="color: #2c2c2c">
+                Agama
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Kegiatan -->
+      <section id="kegiatan" class="w-full px-6 py-20">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            class="font-heading font-semibold text-3xl md:text-4xl text-center"
+            style="color: #2c2c2c"
+          >
+            Kegiatan Kami
+          </h2>
+          <div class="mt-12 space-y-6">
+            <div
+              class="flex gap-4 items-start p-5 rounded-xl transition hover:shadow-md"
+              style="
+                background-color: #ffffff;
+                border: 1px solid rgba(76, 115, 84, 0.1);
+              "
+            >
+              <div
+                class="w-12 h-12 rounded-lg flex-shrink-0 flex items-center justify-center"
+                style="background-color: #4c7354"
+              >
+                <i
+                  data-lucide="mic"
+                  style="color: #faf6f0; width: 20px; height: 20px"
+                ></i>
+              </div>
+              <div>
+                <h3 class="font-heading font-semibold" style="color: #2c2c2c">
+                  Dongeng Akhir Pekan
+                </h3>
+                <p class="mt-1 text-sm" style="color: #5a5a5a">
+                  Setiap Sabtu pagi, kami mengadakan sesi mendongeng untuk
+                  anak-anak usia 4-10 tahun.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 items-start p-5 rounded-xl transition hover:shadow-md"
+              style="
+                background-color: #ffffff;
+                border: 1px solid rgba(76, 115, 84, 0.1);
+              "
+            >
+              <div
+                class="w-12 h-12 rounded-lg flex-shrink-0 flex items-center justify-center"
+                style="background-color: #eab364"
+              >
+                <i
+                  data-lucide="pen-tool"
+                  style="color: #faf6f0; width: 20px; height: 20px"
+                ></i>
+              </div>
+              <div>
+                <h3 class="font-heading font-semibold" style="color: #2c2c2c">
+                  Workshop Menulis Kreatif
+                </h3>
+                <p class="mt-1 text-sm" style="color: #5a5a5a">
+                  Pelatihan menulis cerpen dan puisi bersama penulis lokal
+                  setiap bulan.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex gap-4 items-start p-5 rounded-xl transition hover:shadow-md"
+              style="
+                background-color: #ffffff;
+                border: 1px solid rgba(76, 115, 84, 0.1);
+              "
+            >
+              <div
+                class="w-12 h-12 rounded-lg flex-shrink-0 flex items-center justify-center"
+                style="background-color: #4c7354"
+              >
+                <i
+                  data-lucide="message-circle"
+                  style="color: #faf6f0; width: 20px; height: 20px"
+                ></i>
+              </div>
+              <div>
+                <h3 class="font-heading font-semibold" style="color: #2c2c2c">
+                  Klub Diskusi Buku
+                </h3>
+                <p class="mt-1 text-sm" style="color: #5a5a5a">
+                  Diskusi buku pilihan bulanan bersama komunitas pembaca setiap
+                  Minggu sore.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Kontak -->
+      <section
+        id="kontak"
+        class="w-full px-6 py-20"
+        style="background-color: #ffffff"
+      >
+        <div class="max-w-3xl mx-auto text-center">
+          <h2
+            class="font-heading font-semibold text-3xl md:text-4xl"
+            style="color: #2c2c2c"
+          >
+            Kunjungi Kami
+          </h2>
+          <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center"
+                style="background-color: rgba(76, 115, 84, 0.1)"
+              >
+                <i
+                  data-lucide="map-pin"
+                  style="color: #4c7354; width: 22px; height: 22px"
+                ></i>
+              </div>
+              <p id="address-text" class="mt-3 text-sm" style="color: #5a5a5a">
+                Jl. Pendidikan No. 12<br />
+                Kelurahan Harapan
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center"
+                style="background-color: rgba(76, 115, 84, 0.1)"
+              >
+                <i
+                  data-lucide="clock"
+                  style="color: #4c7354; width: 22px; height: 22px"
+                ></i>
+              </div>
+              <p class="mt-3 text-sm" style="color: #5a5a5a">
+                Senin - Sabtu<br />
+                08.00 - 17.00 WIB
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center"
+                style="background-color: rgba(76, 115, 84, 0.1)"
+              >
+                <i
+                  data-lucide="phone"
+                  style="color: #4c7354; width: 22px; height: 22px"
+                ></i>
+              </div>
+              <p class="mt-3 text-sm" style="color: #5a5a5a">
+                (021) 1234-5678<br />
+                info@tamanbaca.id
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer
+        class="w-full px-6 py-8 text-center"
+        style="background-color: #2c2c2c"
+      >
+        <p class="text-sm" style="color: rgba(250, 246, 240, 0.7)">
+          &copy; <script>document.write(new Date().getFullYear())</script> Taman Baca Masyarakat. Menyebarkan literasi untuk semua
+        </p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
